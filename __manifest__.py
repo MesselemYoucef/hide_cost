@@ -10,14 +10,15 @@
     'Licence': 'LGPL-3',
     'images': [],
     'depends': [
+        'base',
         'sale',
         'product',
     ],
     'data': [
         'security/security.xml',
-        'views/sale_view.xml',
         'views/product_view.xml',
-        'views/product_variant_view.xml'
+        'views/product_variant_view.xml',
+        'views/sale_view.xml',
     ],
     'demo': [],
     'qweb': [],

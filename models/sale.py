@@ -4,7 +4,7 @@ from odoo import api, fields, models
 class ProductCost(models.Model):
     _inherit = "sale.order"
 
-    hide_cost = fields.Boolean(string="Cost Should Be Hidden", compute="_check_user_cost_privilege")
+    hide_cost = fields.Boolean(string="Cost Hidden", compute="_check_user_cost_privilege", default=True)
 
     @api.depends("name")
     def _check_user_cost_privilege(self):
