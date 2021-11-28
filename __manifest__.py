@@ -12,6 +12,7 @@
     'depends': [
         'base',
         'sale',
+        'sale_margin',
         'product',
     ],
     'data': [

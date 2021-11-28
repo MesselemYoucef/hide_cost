@@ -2,7 +2,7 @@ from odoo import api, fields, models
 
 
 class ProductCost(models.Model):
-    _inherit = "sale.order"
+    _inherit = "sale.order.line"
 
     hide_cost = fields.Boolean(string="Cost Hidden", compute="_check_user_cost_privilege", default=True)
 
