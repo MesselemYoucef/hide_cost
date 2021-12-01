@@ -24,5 +24,30 @@
             </xpath>
         </field>
     </record>
+
+    <record id="sale_margin_sale_order_inherited" model="ir.ui.view">
+        <field name="name">sale.margin.sale.order.inherited</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale_margin.sale_margin_sale_order"/>
+        <field name="priority">1001</field>
+        <field name="arch" type="xml">
+            <!--            Creating a cost allowed field then hiding it-->
+            <xpath expr="//field[@name='margin_percent']" position="after">
+                <field name="hide_cost"/>
+            </xpath>
+            <xpath expr="//field[@name='hide_cost']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//label[@for='margin']" position="attributes">
+                <attribute name="attrs">{'invisible':[('hide_cost', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='margin']" position="attributes">
+                <attribute name="attrs">{'invisible':[('hide_cost', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='margin_percent']" position="attributes">
+                <attribute name="attrs">{'invisible':[('hide_cost', '=', True)]}</attribute>
+            </xpath>
+        </field>
+    </record>
 </odoo>
 
