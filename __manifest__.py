@@ -2,11 +2,11 @@
 {
     'name': 'Hide Cost',
     'version': '1.0',
-    'summary': 'Hide the product cost from some group of users',
+    'summary': 'Hide the product cost',
     'sequence': -103,
-    'description': """Hide the cost for a group of users""",
+    'description': """Hide the product cost from the 'Product Template', 'Product Variant', 'Sales Order and Quotation'""",
     'category': 'Productivity',
-    'website': 'https://www.odoo.com',
+    'website': 'https://github.com/MesselemYoucef',
     'Licence': 'LGPL-3',
     'images': [],
     'depends': [
